@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    notebook
+    <ul>
+        <a href="./">home</a>
+        <a href="./about.html">about</a>
+        <a href="./pages.html">notebook</a>
+    </ul>
+    <script>
+        //hard written for-loop to grab all the notebook imgs and append them with a link wrapped around
+        for(let i=0;i<51;i++){
+            let photo = document.createElement('img')
+            let link = document.createElement('a')
+
+            link.href = `/${i}`
+
+            photo.src = `pages/${i} small.jpeg`
+            photo.width = window.innerWidth/5
+            link.appendChild(photo)
+            document.body.append(link)
+        }
+    </script>
+</body>
+</html>
